@@ -14,17 +14,23 @@ This project aims to analyze customer churn and develop a predictive model to id
 The dataset used in this project is sourced from Kaggle and consists of Telco customer data. It includes various features such as customer demographics, services subscribed, account information, and churn status.
 
 # Project Structure
+- Jupyter Notebook: Contains data preprocessing, exploratory data analysis (EDA), modeling, and evaluation using Python libraries such as pandas, numpy, and scikit-learn.
+- Streamlit App: Deploys the trained model for interactive predictions and analysis.
+
+- # Project Flow
 - Importing Libraries: Import necessary libraries for data analysis and visualization.
 - Loading the Dataset: Load the Telco customer dataset into a Pandas DataFrame.
 - Exploratory Data Analysis (EDA): Visualize the distribution of numerical and categorical features.
 - Data Cleaning: Correct data types and handle missing values in the dataset.
-- Data Transformation: Divide customers into tenure groups based on their length of subscription. Drop unnecessary columns like customerID. Convert the target variable 'Churn' into binary numeric format. Convert categorical variables into dummy variables for modeling.
+- Data Transformation: Drop unnecessary columns. Convert the target variable 'Churn' into binary numeric format. 
 - Data Visualization: Visualize the distribution of numerical and categorical features. Examine correlations between features using heatmaps.
-- Modeling: Define a preprocessing pipeline for numerical and categorical features. Select classifiers and evaluate their performance using cross-validation. Train logistic regression model as it showed the highest average accuracy. Evaluate the trained model on the training data.
+- Feature Selection: Select features for modelling based on correlation.
+- Modeling: Define a preprocessing pipeline for numerical and categorical features. Select classifiers and evaluate their performance using cross-validation. Train Gradient Boosting model as it showed the highest average accuracy. Evaluate the trained model on the training data.
 - Prediction on Sample Data: Use the trained model to make predictions on sample customer data. Display the predictions indicating whether each customer is likely to churn.
-- Save the Model: Save the trained logistic regression model for future use in predicting customer churn.
-
+- Save the Model: Save the trained gradient boosting model for future use in predicting customer churn.
+- Deployment: Deploy the model on Streamlit
+  
 # Conclusions
-- Insights from EDA: Identified factors influencing churn such as tenure, monthly charges, and total charges. Discovered patterns in customer behavior based on demographics and services subscribed.
-- Model Performance: Trained a logistic regression model with an accuracy of 81% on the training data. Evaluated the model's performance using classification metrics such as precision, recall, and F1-score.
+- Insights from EDA: Identified customers likely to churn, factors influencing churn
+- Model Performance: Trained a gradient boosting model with an accuracy of 82.1% on the training data. Evaluated the model's performance using classification metrics such as precision, recall, and F1-score.
 - Recommendations for Business: Provided strategies for customer retention based on insights from the analysis, including personalized offers, onboarding programs, and price optimization. Suggested approaches for bringing back churned customers through win-back campaigns and reactivation offers.
